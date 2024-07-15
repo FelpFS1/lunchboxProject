@@ -14,14 +14,16 @@ export const Container = styled.aside`
   left: 0;
 `;
 interface ButtonProps {
-  variant?: boolean;
+  $variant?: string;
 }
 export const Button = styled.button<ButtonProps>`
   width: 41px;
   height: 41px;
   border-radius: 10px;
   background-color: ${(props) =>
-    props.variant ? props.theme["gray-100"] : props.theme["gray-400"]};
+    props.$variant == "true"
+      ? props.theme["gray-100"]
+      : props.theme["gray-400"]};
   border: 0;
   color: ${(props) => props.theme.white};
   cursor: pointer;
@@ -32,6 +34,6 @@ export const Button = styled.button<ButtonProps>`
 
   &:hover {
     background-color: ${(props) =>
-      props.variant ? null : props.theme["gray-500"]};
+      props.$variant == "true" ? null : props.theme["gray-500"]};
   }
 `;
