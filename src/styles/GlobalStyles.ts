@@ -7,7 +7,13 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
     box-sizing: border-box;
 }
-    body{
+
+:focus{
+    outline: 0;
+    box-shadow: 0 0 0 2px ${(props) => props.theme["gray-500"]};
+
+}
+body{
         background-color: ${(props) => props.theme["gray-700"]};
         color:  ${(props) => props.theme["gray-100"]};
         -webkit-font-smoothing:antialiased;
