@@ -1,3 +1,5 @@
+import Summary from "../../components/Summary";
+
 export default function Home() {
-  return <h1>Home</h1>;
+  return <Summary />;
 }
