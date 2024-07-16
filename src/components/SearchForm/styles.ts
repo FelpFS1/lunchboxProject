@@ -6,32 +6,37 @@ export const SearchFormContainer = styled.form`
 
   display: flex;
   padding: 0 3.333vw;
+  gap: 1rem;
+  align-items: center;
   input {
-    width: 82%;
+    width: 100%;
+    height: 50px;
     background-color: ${(props) => props.theme["gray-400"]};
     border-radius: 8px;
     border: 0;
     padding: 0.8rem;
-    margin-right: 2rem;
+
     color: ${(props) => props.theme.white};
   }
+`;
 
-  button {
-    background-color: transparent;
-    border: 1px solid;
-    border-color: ${(props) => props.theme["gray-100"]};
-    border-radius: 8px;
-    color: ${(props) => props.theme["gray-100"]};
-    padding: 0.5rem;
+export const SearchButton = styled.button`
+  height: 50px;
+  background-color: transparent;
+  border: 1px solid;
+  border-color: ${(props) => props.theme["gray-100"]};
+  border-radius: 8px;
+  color: ${(props) => props.theme["gray-100"]};
+  padding: 0.5rem;
+  text-transform: uppercase;
 
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
 
-    &:hover {
-      background-color: ${(props) => props.theme["gray-400"]};
-    }
+  &:hover {
+    background-color: ${(props) => props.theme["gray-400"]};
   }
 `;
