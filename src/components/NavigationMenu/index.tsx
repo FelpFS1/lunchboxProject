@@ -9,6 +9,7 @@ export default function NavigationMenu() {
       <Link to="/">
         <Styles.Button $variant={pathname === "/" ? "true" : "false"}>
           <House size={24} />
+          <span>HOME</span>
         </Styles.Button>
       </Link>
       <Link to="/clients">

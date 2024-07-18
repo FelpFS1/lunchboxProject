@@ -36,4 +36,7 @@ export const Button = styled.button<ButtonProps>`
     background-color: ${(props) =>
       props.$variant == "true" ? null : props.theme["gray-500"]};
   }
+  span {
+    display: none;
+  }
 `;
