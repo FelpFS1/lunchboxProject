@@ -21,10 +21,10 @@ export default function AddlunchButton() {
         <Styles.ModalTitle>Adicionar marmitas</Styles.ModalTitle>
         <Styles.FormContainer onSubmit={handleSubmit}>
           <Select.Root>
-            <Styles.SelectTrigger aria-label="Food">
-              <Select.Value placeholder="Select food..." />
+            <Styles.SelectTrigger aria-label="Client">
+              <Select.Value placeholder="Selecione o cliente..." />
 
-              <Select.Icon className="SelectIcon">
+              <Select.Icon>
                 <CaretDown size={24} />
               </Select.Icon>
             </Styles.SelectTrigger>
@@ -35,9 +35,7 @@ export default function AddlunchButton() {
                 </Styles.SelectScrollButton>
                 <Select.Viewport>
                   <Select.Group>
-                    <SelectItem value="apple">apple</SelectItem>
-                    <SelectItem value="banana">Banana</SelectItem>
-                    <SelectItem value="orange">Orange</SelectItem>
+                    <SelectItem value="id">Osmar</SelectItem>
                   </Select.Group>
                 </Select.Viewport>
                 <Select.ScrollDownButton />
