@@ -14,6 +14,7 @@ export const TableContainer = styled.table`
     background: ${(props) => props.theme["gray-400"]};
     border-right: 2px solid ${(props) => props.theme["gray-400"]};
     border-left: 2px solid ${(props) => props.theme["gray-400"]};
+    text-transform: uppercase;
 
     &:first-child {
       border-top-left-radius: 6px;
