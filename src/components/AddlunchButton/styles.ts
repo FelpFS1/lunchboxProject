@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import * as Dialog from "@radix-ui/react-dialog";
+import * as Select from "@radix-ui/react-select";
 
 export const ButtonContainer = styled.button`
   width: 48px;
@@ -31,14 +32,7 @@ export const FormContainer = styled.form`
   gap: 1rem;
   align-items: center;
   width: 100%;
-  select {
-    cursor: pointer;
-    option {
-      color: red;
-    }
-  }
 
-  select,
   input {
     width: 100%;
     background-color: ${(props) => props.theme["gray-700"]};
@@ -46,9 +40,6 @@ export const FormContainer = styled.form`
     padding: 0.8rem 0.5rem;
     border: 0;
     border-radius: 8px;
-
-    -moz-appearance: textfield;
-    appearance: textfield;
     &::placeholder {
       color: ${(props) => props.theme["gray-100"]};
     }
@@ -68,4 +59,47 @@ export const AddButton = styled.button`
     transition: all 0.2s ease-in-out;
     background-color: ${(props) => props.theme["green-700"]};
   }
+`;
+
+export const SelectTrigger = styled(Select.Trigger)`
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+  border: 0;
+  border-radius: 8px;
+  padding: 0.8rem 0.5rem;
+
+  text-align: left;
+  background-color: ${(props) => props.theme["gray-700"]};
+  color: ${(props) => props.theme["gray-100"]};
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+
+  svg {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+`;
+export const SelectContent = styled(Select.Content)`
+  position: relative;
+
+  display: flex;
+  margin: 2.5rem auto;
+  width: 80%;
+  overflow: hidden;
+  background-color: ${(props) => props.theme["white"]};
+  border-radius: 6px;
+  box-shadow: 0px 10px 38px -10px rgba(22, 23, 24, 0.35),
+    0px 10px 20px -15px rgba(22, 23, 24, 0.2);
+`;
+
+export const SelectScrollButton = styled(Select.ScrollUpButton)`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 25px;
+  background-color: white;
+  color: purple;
+  cursor: default;
 `;
