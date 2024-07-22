@@ -31,6 +31,12 @@ export const FormContainer = styled.form`
   gap: 1rem;
   align-items: center;
   width: 100%;
+  select {
+    cursor: pointer;
+    option {
+      color: red;
+    }
+  }
 
   select,
   input {
