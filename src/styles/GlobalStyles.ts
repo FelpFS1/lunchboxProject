@@ -29,5 +29,10 @@ body{
     font:400 1rem "Roboto", sans-serif;
 }
 
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+    
+}
+
 `;
 export default GlobalStyles;
