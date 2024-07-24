@@ -35,27 +35,6 @@ export const FilterButton = styled.button`
   }
 `;
 
-export const AddCustomerButton = styled.button`
-  height: 50px;
-  background-color: transparent;
-  border: 1px solid;
-  border-color: ${(props) => props.theme["gray-100"]};
-  border-radius: 8px;
-  color: ${(props) => props.theme["gray-100"]};
-  padding: 1rem;
-  text-transform: uppercase;
-  color: ${(props) => props.theme.white};
-  display: flex;
-  align-items: center;
-
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-
-  &:hover {
-    background-color: ${(props) => props.theme["gray-400"]};
-  }
-`;
-
 export const TdButtons = styled.td`
   display: flex;
   align-items: center;

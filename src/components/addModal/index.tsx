@@ -5,8 +5,9 @@ import { X } from "@phosphor-icons/react";
 
 interface ModalProps {
   children: ReactNode;
+  title: string;
 }
-export default function AddModal({ children }: ModalProps) {
+export default function AddModal({ children, title }: ModalProps) {
   return (
     <Dialog.Portal>
       <Styles.Overlay />
@@ -15,6 +16,7 @@ export default function AddModal({ children }: ModalProps) {
           <X size={24} />
         </Styles.CloseModalButton>
         <Dialog.Description />
+        <Styles.ModalTitle>{title}</Styles.ModalTitle>
         {children}
       </Styles.Content>
     </Dialog.Portal>

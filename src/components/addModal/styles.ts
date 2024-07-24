@@ -36,3 +36,6 @@ export const CloseModalButton = styled(Dialog.Close)`
     opacity: 0.5;
   }
 `;
+export const ModalTitle = styled(Dialog.Title)`
+  color: ${(props) => props.theme.white};
+`;

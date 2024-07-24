@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import * as Dialog from "@radix-ui/react-dialog";
 import * as Select from "@radix-ui/react-select";
 
 export const ButtonContainer = styled.button`
@@ -22,9 +21,6 @@ export const ButtonContainer = styled.button`
   }
 `;
 
-export const ModalTitle = styled(Dialog.Title)`
-  color: ${(props) => props.theme.white};
-`;
 export const FormContainer = styled.form`
   display: flex;
   flex-direction: column;

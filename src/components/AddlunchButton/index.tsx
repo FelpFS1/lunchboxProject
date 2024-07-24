@@ -17,8 +17,7 @@ export default function AddlunchButton() {
           <Plus />
         </Styles.ButtonContainer>
       </Dialog.Trigger>
-      <AddModal>
-        <Styles.ModalTitle>Adicionar marmitas</Styles.ModalTitle>
+      <AddModal title="Adicionar marmitas">
         <Styles.FormContainer onSubmit={handleSubmit}>
           <Select.Root>
             <Styles.SelectTrigger aria-label="Client">

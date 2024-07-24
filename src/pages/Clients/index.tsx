@@ -2,7 +2,9 @@ import { Eye, Funnel, Pencil, Trash } from "@phosphor-icons/react";
 import Summary from "../../components/Summary";
 
 import * as Styles from "./styles";
+
 import DataTable from "../../components/DataTable";
+import AddCustomerButton from "./components/AddCustomerButton";
 
 export default function Clients() {
   return (
@@ -16,7 +18,7 @@ export default function Clients() {
         <Styles.FilterButton>
           <Funnel size={24} />
         </Styles.FilterButton>
-        <Styles.AddCustomerButton>Adicionar</Styles.AddCustomerButton>
+        <AddCustomerButton />
       </Styles.OptionsContainer>
       <DataTable>
         <tbody>
