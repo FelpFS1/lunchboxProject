@@ -15,7 +15,6 @@ export default function Home() {
       <SearchForm>
         <AddlunchButton />
       </SearchForm>
-
       <DataTable>
         <tbody>
           <tr>
