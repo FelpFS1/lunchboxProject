@@ -1,7 +1,7 @@
 import { CaretDown, CaretUp, Plus } from "@phosphor-icons/react";
 import * as Styles from "./styles";
 import * as Dialog from "@radix-ui/react-dialog";
-import AddModal from "../AddModal";
+import AddModal from "../Modal";
 import * as Select from "@radix-ui/react-select";
 import SelectItem from "./components/SelectItem";
 import { FormEvent } from "react";

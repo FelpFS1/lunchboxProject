@@ -1,6 +1,6 @@
 import * as Dialog from "@radix-ui/react-dialog";
 import * as Styles from "./styles";
-import AddModal from "../../../../components/AddModal";
+import AddModal from "../../../../components/Modal";
 import { HardHat, User } from "@phosphor-icons/react";
 import { useState } from "react";
 export default function AddCustomerButton() {
