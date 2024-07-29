@@ -1,3 +1,4 @@
+import AddlunchButton from "../../components/AddlunchButton";
 import DataTable from "../../components/DataTable";
 import SearchForm from "../../components/SearchForm";
 import Summary from "../../components/Summary";
@@ -10,7 +11,11 @@ export default function Home() {
         secondCard={{ title: "Quantidade semanal", content: "42" }}
         thirdCard={{ title: "Quantidade diaria", content: "7" }}
       />
-      <SearchForm />
+
+      <SearchForm>
+        <AddlunchButton />
+      </SearchForm>
+
       <DataTable>
         <tbody>
           <tr>
