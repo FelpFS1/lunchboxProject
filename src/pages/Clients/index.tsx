@@ -27,9 +27,9 @@ export default function Clients() {
             <td>VALE DAS PALMEIRAS</td>
             <td>OBRA</td>
             <Styles.TdButtons>
-              <Eye size={24} />
-              <Pencil size={24} />
-              <Trash size={24} />
+              <Eye size={20} />
+              <Pencil size={20} />
+              <Trash size={20} />
             </Styles.TdButtons>
           </tr>
           <tr>
@@ -37,9 +37,9 @@ export default function Clients() {
             <td>Del Rey</td>
             <td>OBRA</td>
             <Styles.TdButtons>
-              <Eye size={24} />
-              <Pencil size={24} />
-              <Trash size={24} />
+              <Eye size={20} />
+              <Pencil size={20} />
+              <Trash size={20} />
             </Styles.TdButtons>
           </tr>
         </tbody>
