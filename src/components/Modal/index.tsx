@@ -7,7 +7,7 @@ interface ModalProps {
   children: ReactNode;
   title: string;
 }
-export default function AddModal({ children, title }: ModalProps) {
+export default function Modal({ children, title }: ModalProps) {
   return (
     <Dialog.Portal>
       <Styles.Overlay />
