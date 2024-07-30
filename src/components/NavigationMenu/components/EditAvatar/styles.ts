@@ -23,15 +23,15 @@ export const AvatarOptions = styled.section`
   margin: 1rem 0;
   width: 100%;
   display: grid;
-  gap: 0.5rem;
+  gap: 1rem;
   grid-template-columns: repeat(4, 3fr);
   align-items: center;
 `;
 export const AvatarButton = styled.button`
-  width: 100px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
   border: 0;
-  border-radius: 100px;
+  border-radius: 100%;
   background-color: transparent;
   cursor: pointer;
   text-align: center;
