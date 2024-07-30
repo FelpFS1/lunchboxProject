@@ -20,11 +20,14 @@ export const Avatar = styled.div`
   width: 35px;
   height: 35px;
   border-radius: 100%;
+  border: 0;
   background-color: ${(props) => props.theme["gray-100"]};
   display: flex;
   justify-content: center;
   align-items: center;
-  svg {
-    color: ${(props) => props.theme.white};
+  img {
+    width: 38px;
+    height: 38px;
+    border-radius: 100%;
   }
 `;
