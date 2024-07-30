@@ -40,3 +40,32 @@ export const Button = styled.button<ButtonProps>`
     display: none;
   }
 `;
+
+export const EditProfileContainer = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  div {
+    display: flex;
+    flex-direction: column;
+    border-radius: 100px;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    img {
+      width: 100px;
+      border-radius: 100px;
+    }
+
+    button {
+      width: 80px;
+      background-color: transparent;
+      border: 1px solid;
+      padding: 0.2rem;
+      font-size: 0.8rem;
+      border-radius: 8px;
+      cursor: pointer;
+      color: ${(props) => props.theme.white};
+    }
+  }
+`;
