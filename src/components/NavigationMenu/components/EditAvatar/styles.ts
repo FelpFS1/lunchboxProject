@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import * as RadioGroup from "@radix-ui/react-radio-group";
+
 export const EditContainer = styled.div`
   width: 100%;
   display: flex;
@@ -19,7 +21,7 @@ export const AvatarContainer = styled.div`
   text-align: center;
   margin: 0.5rem 0;
 `;
-export const AvatarOptions = styled.section`
+export const AvatarOptions = styled(RadioGroup.Root)`
   margin: 1rem 0;
   width: 100%;
   display: grid;
@@ -27,7 +29,7 @@ export const AvatarOptions = styled.section`
   grid-template-columns: repeat(4, 3fr);
   align-items: center;
 `;
-export const AvatarButton = styled.button`
+export const AvatarButton = styled(RadioGroup.Item)`
   width: 70px;
   height: 70px;
   border: 0;
@@ -37,6 +39,12 @@ export const AvatarButton = styled.button`
   text-align: center;
 
   transition: all 0.3s ease-in-out;
+  &[data-state="checked"] {
+    cursor: default;
+    img {
+      border: 3.5px solid ${(props) => props.theme["green-500"]};
+    }
+  }
   img {
     width: 70px;
     height: 70px;

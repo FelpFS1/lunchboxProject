@@ -1,5 +1,6 @@
 import { File, X } from "@phosphor-icons/react";
 import * as Styles from "./styles";
+import SaveAvatarButton from "../../../SaveAvatarButton";
 interface HasFileProps {
   file: File;
   cancelDrop: () => void;
@@ -14,7 +15,7 @@ export default function HasFile({ file, cancelDrop }: HasFileProps) {
         <File size={24} />
         <span>{file.name}</span>
       </Styles.HasFileMain>
-      <Styles.SaveAvatarButton>Salvar</Styles.SaveAvatarButton>
+      <SaveAvatarButton />
     </Styles.HasFileContainer>
   );
 }
