@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import * as Popover from "@radix-ui/react-popover";
 import * as RadioGroup from "@radix-ui/react-radio-group";
+import breakpoints from "../../styles/breakPoints";
 
 export const ClientsContainer = styled.div`
   width: 100%;
@@ -48,6 +49,12 @@ export const TdButtons = styled.td`
   }
   svg {
     cursor: pointer;
+  }
+
+  @media ${breakpoints.lg} {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.3rem;
   }
 `;
 
