@@ -1,14 +1,15 @@
 import styled from "styled-components";
+import breakpoints from "../../styles/breakPoints";
 
 export const TableContainer = styled.table`
   width: 85vw;
-
   border-collapse: separate;
   border-spacing: 0 0.5rem;
   margin-top: 1.5rem;
   justify-content: center;
   padding: 0 3.333vw;
-  overflow-x: auto;
+  overflow-x: scroll;
+  white-space: nowrap;
 
   td {
     padding: 1.25rem 2rem;
@@ -25,6 +26,25 @@ export const TableContainer = styled.table`
       text-align: right;
       border-top-right-radius: 6px;
       border-bottom-right-radius: 6px;
+    }
+  }
+
+  @media ${breakpoints.xl} {
+    white-space: normal;
+    td {
+      padding: 0.8rem;
+      font-size: 0.8rem;
+    }
+    svg {
+      width: 1.3rem;
+    }
+  }
+  @media ${breakpoints.lg} {
+    padding: 0;
+    td {
+      overflow-y: scroll;
+      padding: 0.8rem;
+      font-size: 0.8rem;
     }
   }
 `;
