@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import breakpoints from "../../../styles/breakPoints";
 
 export const Container = styled.div`
   width: 21.615vw;
@@ -14,12 +15,24 @@ export const Container = styled.div`
   }
 
   span {
-    height: 100%;
+    height: 78%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 5rem;
     font-weight: bold;
     color: ${(props) => props.theme.white};
+  }
+
+  @media ${breakpoints.xl} {
+    span {
+      font-size: 3rem;
+    }
+  }
+  @media ${breakpoints.lg} {
+    width: 100%;
+    span {
+      font-size: 4rem;
+    }
   }
 `;
