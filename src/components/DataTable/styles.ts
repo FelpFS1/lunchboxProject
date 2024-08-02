@@ -31,6 +31,7 @@ export const TableContainer = styled.table`
 
   @media ${breakpoints.xl} {
     white-space: normal;
+    padding: 0;
     td {
       padding: 0.8rem;
       font-size: 0.8rem;
@@ -39,12 +40,12 @@ export const TableContainer = styled.table`
       width: 1.3rem;
     }
   }
-  @media ${breakpoints.lg} {
+  @media ${breakpoints.md} {
     padding: 0;
     td {
       overflow-y: scroll;
-      padding: 0.8rem;
-      font-size: 0.8rem;
+      padding: 0.8rem 0.4rem;
+      font-size: 0.75rem;
     }
   }
 `;
