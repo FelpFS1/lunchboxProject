@@ -1,6 +1,6 @@
 const size = {
   sm: "865px",
-  md: "920px",
+  md: "445px",
   lg: "545px",
   xl: "865px",
 };
