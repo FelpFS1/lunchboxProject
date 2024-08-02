@@ -1,5 +1,6 @@
 import * as Dialog from "@radix-ui/react-dialog";
 import styled from "styled-components";
+import breakpoints from "../../styles/breakPoints";
 
 export const Overlay = styled(Dialog.Overlay)`
   position: fixed;
@@ -11,6 +12,7 @@ export const Overlay = styled(Dialog.Overlay)`
 
 export const Content = styled(Dialog.Content)`
   min-width: 25vw;
+  flex-direction: column;
   border-radius: 6px;
   padding: 1rem;
   background: ${(props) => props.theme["gray-400"]};
@@ -19,6 +21,11 @@ export const Content = styled(Dialog.Content)`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
+  @media ${breakpoints.xl} {
+    min-width: 80vw;
+    font-size: 0.7rem;
+  }
 `;
 
 export const CloseModalButton = styled(Dialog.Close)`
@@ -38,4 +45,5 @@ export const CloseModalButton = styled(Dialog.Close)`
 `;
 export const ModalTitle = styled(Dialog.Title)`
   color: ${(props) => props.theme.white};
+  margin-bottom: 1rem;
 `;
