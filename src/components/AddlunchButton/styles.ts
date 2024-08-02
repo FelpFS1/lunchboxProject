@@ -2,7 +2,7 @@ import styled from "styled-components";
 import * as Select from "@radix-ui/react-select";
 
 export const ButtonContainer = styled.button`
-  width: 48px;
+  min-width: 40px;
   height: 36px;
   border: 0;
   border-radius: 8px;

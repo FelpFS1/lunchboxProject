@@ -47,8 +47,13 @@ export const SearchButton = styled.button`
   gap: 0.5rem;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
+  font-weight: bold;
 
   &:hover {
     background-color: ${(props) => props.theme["gray-400"]};
+  }
+
+  @media ${breakpoints.lg} {
+    font-size: 0.8rem;
   }
 `;
