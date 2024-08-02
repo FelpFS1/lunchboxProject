@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import breakpoints from "../../styles/breakPoints";
 
 export const SearchFormContainer = styled.form`
   width: 85vw;
@@ -17,6 +18,17 @@ export const SearchFormContainer = styled.form`
     padding: 0.8rem;
 
     color: ${(props) => props.theme.white};
+  }
+
+  @media ${breakpoints.lg} {
+    width: 100%;
+    padding: 0;
+    gap: 0.5rem;
+
+    input {
+      width: 80%;
+      font-size: 0.8rem;
+    }
   }
 `;
 
