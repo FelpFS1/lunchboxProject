@@ -30,7 +30,7 @@ export const CalendarContainer = styled.form`
   }
 `;
 export const CalendarDateRange = styled(Date.DateRange)`
-  width: 105%;
+  width: 100%;
   background-color: ${(props) => props.theme["gray-300"]};
   font-size: 1rem;
   border-radius: 8px;
@@ -65,6 +65,7 @@ export const CalendarDateRange = styled(Date.DateRange)`
   }
 
   @media ${breakpoints.lg} {
+    width: 105%;
     font-size: 0.75rem;
 
     .rdrMonths {
