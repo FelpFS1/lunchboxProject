@@ -1,5 +1,6 @@
 import * as Date from "react-date-range";
 import styled from "styled-components";
+import breakpoints from "../../../../styles/breakPoints";
 
 import "react-date-range/dist/styles.css"; // main style file
 import "react-date-range/dist/theme/default.css"; // theme css file
@@ -29,18 +30,18 @@ export const CalendarContainer = styled.form`
   }
 `;
 export const CalendarDateRange = styled(Date.DateRange)`
-  width: 100%;
+  width: 105%;
   background-color: ${(props) => props.theme["gray-300"]};
-
+  font-size: 1rem;
   border-radius: 8px;
   color: white;
-  font-size: 1rem;
 
   input {
     border: 0;
     padding: 0;
     outline: none;
   }
+
   .rdrDateDisplayWrapper {
     background-color: transparent;
     span {
@@ -54,9 +55,22 @@ export const CalendarDateRange = styled(Date.DateRange)`
       }
     }
   }
+  .rdrMonths {
+    display: flex;
+    align-items: center;
+  }
   .rdrMonths .rdrMonth .rdrWeekDays {
     display: flex;
     gap: 0.8rem;
+  }
+
+  @media ${breakpoints.lg} {
+    font-size: 0.75rem;
+
+    .rdrMonths {
+      display: flex;
+      align-items: baseline;
+    }
   }
 `;
 
