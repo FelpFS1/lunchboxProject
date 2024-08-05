@@ -21,18 +21,38 @@ export const CalendarContainer = styled.form`
     border: solid 1px black;
     padding-left: 2rem;
     outline: none;
+    cursor: pointer;
   }
 `;
 export const CalendarDateRange = styled(Date.DateRange)`
   width: 100%;
-  background-color: transparent;
-  border: 1px solid;
+  background-color: ${(props) => props.theme["gray-300"]};
+
   border-radius: 8px;
   color: white;
+  font-size: 1rem;
+
   input {
-    background-color: ${(props) => props.theme["gray-100"]};
-    border: none;
+    border: 0;
     padding: 0;
+    outline: none;
+  }
+  .rdrDateDisplayWrapper {
+    background-color: transparent;
+    span {
+      background-color: transparent;
+    }
+  }
+  .rdrMonthAndYearWrapper .rdrMonthAndYearPickers {
+    span {
+      select {
+        font-weight: bold;
+      }
+    }
+  }
+  .rdrMonths .rdrMonth .rdrWeekDays {
+    display: flex;
+    gap: 0.8rem;
   }
 `;
 

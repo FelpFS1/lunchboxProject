@@ -22,6 +22,7 @@ export default function Calendar() {
   return (
     <Styles.CalendarContainer onSubmit={handleSubmit}>
       <input
+        readOnly
         type="text"
         value={`${format(
           range[0].startDate ?? new Date(),
