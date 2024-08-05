@@ -15,10 +15,6 @@ export default function Calendar() {
     },
   ]);
 
-  const handleChange = () => {
-    console.log(range);
-  };
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
   };
