@@ -18,8 +18,12 @@ export const CalendarContainer = styled.form`
     padding: 0.6rem;
     color: white;
     border-radius: 8px;
-    border: solid 1px black;
-    padding-left: 2rem;
+    border: 0;
+    -webkit-box-shadow: 4px 3px 13px 1px rgba(0, 0, 0, 0.47);
+    -moz-box-shadow: 4px 3px 13px 1px rgba(0, 0, 0, 0.47);
+    box-shadow: 4px 3px 13px 1px rgba(0, 0, 0, 0.47);
+    text-align: center;
+    font-weight: bold;
     outline: none;
     cursor: pointer;
   }
