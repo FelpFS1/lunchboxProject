@@ -7,27 +7,27 @@ import { Range } from "react-date-range";
 
 export default function Calendar() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  const [range, setRange] = useState<Range[]>([
-    {
-      startDate: new Date(),
-      endDate: addDays(new Date(), 7),
-      key: "selection",
-    },
-  ]);
+  const [range, setRange] = useState<Range>({
+    startDate: new Date(),
+    endDate: addDays(new Date(), 4),
+    key: "selection",
+  });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
   };
+
   const handleOpenCalendar = () => setIsOpen((status) => !status);
+
   return (
     <Styles.CalendarContainer onSubmit={handleSubmit}>
       <input
         readOnly
         type="text"
         value={`${format(
-          range[0].startDate ?? new Date(),
+          range.startDate ?? new Date(),
           "dd/MM/yyyy"
-        )} até ${format(range[0].endDate ?? new Date(), "dd/MM/yyyy")}`}
+        )} até ${format(range.endDate ?? new Date(), "dd/MM/yyyy")}`}
         onClick={handleOpenCalendar}
       />
       {isOpen && (
@@ -35,8 +35,8 @@ export default function Calendar() {
           <Styles.CalendarDateRange
             editableDateInputs
             moveRangeOnFirstSelection={false}
-            ranges={range}
-            onChange={(item) => setRange([item.selection])}
+            ranges={[range]}
+            onChange={(item) => setRange(item.selection)}
             months={1}
             locale={ptBR}
           />
