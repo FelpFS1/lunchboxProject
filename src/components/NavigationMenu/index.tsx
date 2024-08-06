@@ -11,7 +11,6 @@ import * as Dialog from "@radix-ui/react-dialog";
 import { Link, useLocation } from "react-router-dom";
 
 import * as Styles from "./styles";
-import ProfileImg from "../../assets/exemploProfile.jpg";
 
 import Modal from "../Modal";
 import EditAvatar from "./components/EditAvatar";
@@ -68,7 +67,7 @@ export default function NavigationMenu() {
         <Modal title="Configurações">
           <Styles.EditProfileContainer>
             <div>
-              <img src={ProfileImg} alt="" />
+              <img src="https://i.ibb.co/vcRV7wr/9334402.jpg" alt="" />
               <Dialog.Root>
                 <Dialog.Trigger asChild>
                   <button>Editar perfil</button>
