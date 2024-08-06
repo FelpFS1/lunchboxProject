@@ -39,9 +39,9 @@ export default function NavigationMenu() {
           <span>Home</span>
         </Styles.Button>
       </Link>
-      <Link to="/clients">
+      <Link to="/customers">
         <Styles.Button
-          $variant={pathname === "/clients" ? "true" : "false"}
+          $variant={pathname === "/customers" ? "true" : "false"}
           onClick={handleToggleMenu}
         >
           <UserList size={24} />

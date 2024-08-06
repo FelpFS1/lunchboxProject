@@ -8,7 +8,7 @@ import DataTable from "../../components/DataTable";
 import AddCustomerButton from "./components/AddCustomerButton";
 import Modal from "../../components/Modal";
 
-export default function Clients() {
+export default function Customers() {
   return (
     <Styles.ClientsContainer>
       <Summary
