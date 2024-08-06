@@ -38,7 +38,7 @@ export const FilterButton = styled.button`
   }
 `;
 
-export const TdButtons = styled.td`
+export const TdButtons = styled.div`
   display: flex;
   align-items: center;
   justify-content: right;
@@ -110,13 +110,13 @@ export const RadioIndicator = styled(RadioGroup.Indicator)`
     background-color: ${(props) => props.theme["gray-100"]};
   }
 `;
-export const PopoverButtonsContainer = styled.div`
+export const ButtonsContainer = styled.div`
   width: 100%;
   display: flex;
   gap: 1.5rem;
   margin-top: 1rem;
 `;
-export const FilterCustomerButton = styled.button`
+export const CustomerButton = styled.button`
   width: 100%;
   background-color: ${(props) => props.theme["green-300"]};
   border: 0;

@@ -14,19 +14,21 @@ export default function WeeklyReport() {
         <SearchForm />
         <DataTable>
           <tbody>
-            <td>OSMAR</td>
-            <td>VALE DAS PALMEIRAS</td>
-            <td>OBRA</td>
-            <td>
-              <Dialog.Root>
-                <Dialog.Trigger asChild>
-                  <FileText size={20} />
-                </Dialog.Trigger>
-                <Modal title="Data do relatório">
-                  <Calendar />
-                </Modal>
-              </Dialog.Root>
-            </td>
+            <tr>
+              <td>OSMAR</td>
+              <td>VALE DAS PALMEIRAS</td>
+              <td>OBRA</td>
+              <td>
+                <Dialog.Root>
+                  <Dialog.Trigger asChild>
+                    <FileText size={20} />
+                  </Dialog.Trigger>
+                  <Modal title="Data do relatório">
+                    <Calendar />
+                  </Modal>
+                </Dialog.Root>
+              </td>
+            </tr>
           </tbody>
         </DataTable>
       </Styles.ReportMain>

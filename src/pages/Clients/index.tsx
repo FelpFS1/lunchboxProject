@@ -1,10 +1,12 @@
 import { Eye, Funnel, Pencil, Trash } from "@phosphor-icons/react";
 import * as Popover from "@radix-ui/react-popover";
+import * as Dialog from "@radix-ui/react-dialog";
+import * as Styles from "./styles";
 
 import Summary from "../../components/Summary";
-import * as Styles from "./styles";
 import DataTable from "../../components/DataTable";
 import AddCustomerButton from "./components/AddCustomerButton";
+import Modal from "../../components/Modal";
 
 export default function Clients() {
   return (
@@ -45,12 +47,10 @@ export default function Clients() {
                     <label htmlFor="constructions">Obras</label>
                   </Styles.Group>
                 </Styles.RadioRoot>
-                <Styles.PopoverButtonsContainer>
+                <Styles.ButtonsContainer>
                   <Styles.CancelButton>Cancelar</Styles.CancelButton>
-                  <Styles.FilterCustomerButton>
-                    Filtrar
-                  </Styles.FilterCustomerButton>
-                </Styles.PopoverButtonsContainer>
+                  <Styles.CustomerButton>Filtrar</Styles.CustomerButton>
+                </Styles.ButtonsContainer>
               </form>
               <Styles.PopoverArrow />
             </Styles.PopoverContent>
@@ -61,24 +61,25 @@ export default function Clients() {
       <DataTable>
         <tbody>
           <tr>
-            <td>OSMAR</td>
-            <td>VALE DAS PALMEIRAS</td>
-            <td>OBRA</td>
-            <Styles.TdButtons>
-              <Eye size={20} />
-              <Pencil size={20} />
-              <Trash size={20} />
-            </Styles.TdButtons>
-          </tr>
-          <tr>
             <td>Heitor</td>
             <td>Del Rey</td>
             <td>OBRA</td>
-            <Styles.TdButtons>
-              <Eye size={20} />
-              <Pencil size={20} />
-              <Trash size={20} />
-            </Styles.TdButtons>
+            <td>
+              <Styles.TdButtons>
+                <Eye size={20} />
+                <Pencil size={20} />
+                <Dialog.Root>
+                  <Dialog.Trigger asChild>
+                    <Trash size={20} />
+                  </Dialog.Trigger>
+                  <Modal title="Confirma a exclusão?">
+                    <Styles.ButtonsContainer>
+                      <Styles.CustomerButton>Apagar</Styles.CustomerButton>
+                    </Styles.ButtonsContainer>
+                  </Modal>
+                </Dialog.Root>
+              </Styles.TdButtons>
+            </td>
           </tr>
         </tbody>
       </DataTable>
